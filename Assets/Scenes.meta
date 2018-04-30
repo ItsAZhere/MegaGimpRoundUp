@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes.meta
 guid: d4bdd2a8efe2e46d2b237d77036562b1
 folderAsset: yes
 timeCreated: 1524957545
+=======
+guid: e0b2597c024e547a49da8b1fe2441010
+folderAsset: yes
+timeCreated: 1525055549
+>>>>>>> master:Assets/Sprites.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

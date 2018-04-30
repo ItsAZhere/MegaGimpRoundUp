@@ -122,6 +122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 326824187}
   - component: {fileID: 326824186}
+  - component: {fileID: 326824188}
+  - component: {fileID: 326824189}
   m_Layer: 0
   m_Name: TempPlayer
   m_TagString: Untagged
@@ -180,12 +182,36 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 326824185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.09, y: -0.662, z: 0}
-  m_LocalScale: {x: 0.6883538, y: 0.6883538, z: 0.6883538}
+  m_LocalPosition: {x: -4.46, y: -0.51, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.6883538}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &326824188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 326824185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e014a03a5ca846c7b23367b4dea2813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceToGo: 1
+  Speed: 1
+--- !u!114 &326824189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 326824185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d76d4707a9ad4374bc68e9e3e1ba9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &358494938
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +264,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 12.191166
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
