@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3499c2443c568426a9c026372f17f99e
+timeCreated: 1525125386
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Nokia Cellphone FC
+  fontNames:
+  - Nokia Cellphone FC
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
