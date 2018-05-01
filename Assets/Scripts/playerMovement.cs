@@ -8,8 +8,7 @@ public class playerMovement : MonoBehaviour {
     [SerializeField] private float Speed;
 
     private bool moveToPoint = false;
-    private Vector3 endPosition;
-
+    private Vector3 endPosition; 
 
 	void Start () {
 
