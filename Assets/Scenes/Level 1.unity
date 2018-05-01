@@ -265,7 +265,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3693ce7285adb47c6b7edb4b9465a1e3, type: 2}
+  - {fileID: 2100000, guid: 625bc1f560e8f48518c499f614927d98, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4605,6 +4605,7 @@ GameObject:
   - component: {fileID: 1155659362}
   - component: {fileID: 1155659361}
   - component: {fileID: 1155659360}
+  - component: {fileID: 1155659363}
   m_Layer: 0
   m_Name: imps_0
   m_TagString: Untagged
@@ -4686,6 +4687,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1155659363
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155659359}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.013169963, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.11804742
 --- !u!1 &1219017086
 GameObject:
   m_ObjectHideFlags: 0
@@ -4726,6 +4742,7 @@ GameObject:
   - component: {fileID: 1376534537}
   - component: {fileID: 1376534541}
   - component: {fileID: 1376534540}
+  - component: {fileID: 1376534542}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4837,6 +4854,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToGo: 0.5
   Speed: 1
+  animationController: {fileID: 1376534537}
+--- !u!70 &1376534542
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1376534536}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0053723445, y: 0.18392555}
+  m_Size: {x: 0.31190628, y: 0.38468438}
+  m_Direction: 0
 --- !u!1 &1632736065
 GameObject:
   m_ObjectHideFlags: 0
