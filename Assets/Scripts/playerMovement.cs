@@ -79,6 +79,7 @@ public class playerMovement : MonoBehaviour {
 		}else if (Input.GetKeyDown (KeyCode.Space))
 		{
 			animationController.Play ("AttackDown");
+
 		}
 
     }
