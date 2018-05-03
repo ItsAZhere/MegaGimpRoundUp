@@ -61,8 +61,10 @@ public class EnemyBehavior : MonoBehaviour {
 
         GameObject fireballPrefab = fireball;
 
-        Vector2 startPosition = gameObject.transform.position;
-        Vector2 targetPosition = target.transform.position;
+        Vector3 startPosition = gameObject.transform.position;
+        Vector3 targetPosition = target.transform.position;
+        startPosition.z = fireballPrefab.transform.position.z;
+        targetPosition.z = fireballPrefab.transform.position.z;
 
         GameObject newFireball = (GameObject)Instantiate(fireball);
         newFireball.transform.position = startPosition;
