@@ -6,66 +6,76 @@ using UnityEngine.SceneManagement;
 
 public class playerBehavior : MonoBehaviour {
 
-    [SerializeField] private int health;
-    public bool gameOver = false;
-    public GameObject[] hearts;
+	[SerializeField] private int health;
+	public bool gameOver = false;
+	public GameObject[] hearts;
 
 	//for score
-	public int score;
+	public Text countText;
+	private int count;
 
 	void Start () {
 
-        Health = 3;
-		
+		Health = 3;
+		count = 0;
+		SetCountText ();
+
 	}
-	
-	
-    public int Health{
-
-        get
-        {
-            return health;
-        }
 
 
-        set
-        {
-            health = value;
-         
+	public int Health{
+
+		get
+		{
+			return health;
+		}
 
 
-            if (health <= 0 && !gameOver)
-            {
-                gameOver = true;
-                SceneManager.LoadScene(6); //if health is out, go to end screen
+		set
+		{
+			health = value;
 
 
-            }
+
+			if (health <= 0 && !gameOver)
+			{
+				gameOver = true;
+				SceneManager.LoadScene(6); //if health is out, go to end screen
 
 
-            for (int i = 0; i < hearts.Length; i++)
-            {
-                if (i < Health)
-                {
-                    hearts[i].SetActive(true);
-                }
-                else
-                {
-                    hearts[i].SetActive(false);
-                }
-            }
-        }
-		
+			}
+
+
+			for (int i = 0; i < hearts.Length; i++)
+			{
+				if (i < Health)
+				{
+					hearts[i].SetActive(true);
+				}
+				else
+				{
+					hearts[i].SetActive(false);
+				}
+			}
+		}
+
 	}
 
 
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.tag == "Enemy") {
 			Destroy (other.gameObject);
-			score ++;
+			count = count + 1;
+			SetCountText ();
 		}
 		if (other.gameObject.tag == "Bush") {
 			other.GetComponent<SpriteRenderer> ().enabled = false;
 		}
 	}
+
+	void SetCountText ()
+	{
+		countText.text = "Gimps Collected: " + count.ToString ();
+	}
 }
+
