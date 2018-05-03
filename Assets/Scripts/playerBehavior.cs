@@ -63,6 +63,8 @@ public class playerBehavior : MonoBehaviour {
 		if (other.gameObject.tag == "Enemy") {
 			Destroy (other.gameObject);
 			score ++;
+		}else if (other.CompareTag("Bush")){
+			other.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 		}
 	}
 }
