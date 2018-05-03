@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Bush
   layers:
   - Default
   - TransparentFX
@@ -42,7 +41,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Bush
-    uniqueID: 995654351
     locked: 0

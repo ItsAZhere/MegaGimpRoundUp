@@ -10,19 +10,13 @@ public class playerBehavior : MonoBehaviour {
     public bool gameOver = false;
     public GameObject[] hearts;
 
-	//
-	public Text countText;
-	private int count;
-
 	//for score
 	public int score;
 
 	void Start () {
 
-        health = 3;
-		count = 0;
-		SetCountText();
-	
+        Health = 3;
+		
 	}
 	
 	
@@ -68,19 +62,7 @@ public class playerBehavior : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.tag == "Enemy") {
 			Destroy (other.gameObject);
-<<<<<<< HEAD
-			count = count + 1;
-			SetCountText ();
-=======
 			score ++;
-		}else if (other.CompareTag("Bush")){
-			other.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
->>>>>>> master
 		}
-	}
-
-
-	void SetCountText(){
-		countText.text = "Gimps Collected: " + count.ToString ();
 	}
 }
