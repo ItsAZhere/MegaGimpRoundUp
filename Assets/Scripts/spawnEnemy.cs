@@ -14,7 +14,6 @@ public class spawnEnemy : MonoBehaviour {
 
 	void Start () {
 
-        lastSpawnTime = Time.time;
         GM = GameObject.Find("gameManager").GetComponent<gameManager>();
 
 		

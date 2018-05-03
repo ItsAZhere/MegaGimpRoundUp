@@ -6,8 +6,8 @@ public class EnemyFireball : MonoBehaviour {
 
 	float speed = 3f;
     public GameObject target;
-    public Vector2 startPosition;
-    public Vector2 targetPosition;
+    public Vector3 startPosition;
+    public Vector3 targetPosition;
 
     private float distance;
     private float startTime;
@@ -17,7 +17,7 @@ public class EnemyFireball : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         startTime = Time.time;
-        distance = Vector2.Distance(startPosition, targetPosition);
+        distance = Vector3.Distance(startPosition, targetPosition);
      
 	
 	}
@@ -35,18 +35,10 @@ public class EnemyFireball : MonoBehaviour {
                 player.Health -= 1;
                 //TODO: Play player getting hurt audio
             }
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
 
 	}
 
 
-	void OnTriggerEnter2D (Collider2D col){
-		
-		//if enemy bullet hits object, it is destroyed
-		if (col.gameObject.tag == "object") {
-			Debug.Log ("Hit surface!");
-			Destroy (gameObject);
-		}
-	}
 }
