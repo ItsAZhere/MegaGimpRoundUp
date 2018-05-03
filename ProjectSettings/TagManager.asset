@@ -3,9 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Enemy
   - Bush
+=======
+  tags: []
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
@@ -43,3 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+=======
+  - name: Bush
+    uniqueID: 3373645641
+    locked: 0
+>>>>>>> master

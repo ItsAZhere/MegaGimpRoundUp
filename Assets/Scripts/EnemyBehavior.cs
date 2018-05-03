@@ -68,12 +68,12 @@ public class EnemyBehavior : MonoBehaviour {
 		Debug.Log ("soot");
 		Instantiate(fireball,transform.parent);
 
-       /* GameObject newFireball = (GameObject)Instantiate(fireball);
+        GameObject newFireball = (GameObject)Instantiate(fireball);
         newFireball.transform.position = startPosition;
         EnemyFireball fireballComp = newFireball.GetComponent<EnemyFireball>();
         fireballComp.target = target.gameObject;
         fireballComp.startPosition = startPosition;
-        fireballComp.targetPosition = targetPosition;*/
+        fireballComp.targetPosition = targetPosition;
 
         //TODO: Add enemy fireball shooting audio 
         //TODO: add shooting animation 
