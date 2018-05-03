@@ -21,10 +21,24 @@ public class BushSpawnFire : MonoBehaviour {
 		}
 	}
 
-	IEnumerator Shoot(){
+	public IEnumerator Shoot(Collider2D target){
 		while (inSpace) {
 			Debug.Log ("Shot");
-			Instantiate (fireball);
+			//Instantiate (fireball);
+			GameObject fireballPrefab = fireball;
+
+			Vector3 startPosition = gameObject.transform.position;
+			Vector3 targetPosition = target.transform.position;
+			startPosition.z = fireballPrefab.transform.position.z;
+			targetPosition.z = fireballPrefab.transform.position.z;
+			Instantiate(fireball,transform.parent);
+
+			GameObject newFireball = (GameObject)Instantiate(fireball);
+			newFireball.transform.position = startPosition;
+			EnemyFireball fireballComp = newFireball.GetComponent<EnemyFireball>();
+			fireballComp.target = target.gameObject;
+			fireballComp.startPosition = startPosition;
+			fireballComp.targetPosition = targetPosition;
 			yield return wait;
 		}
 	}
@@ -33,7 +47,7 @@ public class BushSpawnFire : MonoBehaviour {
 		if (coll.CompareTag ("Player")) {
 			tempPlayer = coll.gameObject;
 			inSpace = true;
-			StartCoroutine (Shoot ());
+			StartCoroutine (Shoot (coll));
 		}
 	}
 	void OnTriggerExit2D(Collider2D coll){
