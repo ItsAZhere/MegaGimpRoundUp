@@ -19,9 +19,13 @@ public class playerBehavior : MonoBehaviour {
 
 	void Start () {
 
+<<<<<<< HEAD
         health = 3;
 		count = 0;
 		SetCountText();
+=======
+        Health = 3;
+>>>>>>> master
 		
 	}
 	
