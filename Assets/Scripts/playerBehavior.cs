@@ -12,7 +12,7 @@ public class playerBehavior : MonoBehaviour {
 
 	void Start () {
 
-        health = 3;
+        Health = 3;
 		
 	}
 	

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour {
 
-
+    public List<GameObject> playerInRange;
 	[SerializeField]
 	GameObject fireball;
 
@@ -12,50 +12,70 @@ public class EnemyBehavior : MonoBehaviour {
 	float fireRate;
 	float nextFire;
 
-	//forStunning
-	public bool isStunned; 
 
 
-	// Use this for initialization
+	
 	void Start () {
 
 		fireRate = 4f;
 		nextFire = Time.time;	
 	}
+
+
 	
-	// Update is called once per frame
+	
 	void Update () {
+        
+        GameObject target = null;
+        foreach (GameObject player in playerInRange){
+            target = player;
 
-		//if isStunned is true, enemy stops moving/attacking and can be picked up
-		if (isStunned == true) {
+        }
 
-
-
-		}
-		
+        if (target!= null){
+            if (Time.time - nextFire > fireRate){
+                Shoot(target.GetComponent< Collider2D>());
+                nextFire = Time.time;
+            }
+        }
 	}
-	//If player bullet hits enemy, enemy is destroyed
-	void OnTriggerEnter2D (Collider2D col)
-	{
-		if (col.gameObject.tag == "Fireball")
-		{
-			//Destroy (col.gameObject);
-			//Destroy (gameObject);
-			isStunned = true;
-			Debug.Log ("Player has hit Enemy! Enemy stunned.");
-		}
-	}
-	void CheckIfTimeToFire ()
-	{
-		if (Time.time > nextFire)
-		{
-			Instantiate (fireball, transform.position, Quaternion.identity);
-			nextFire = Time.time + fireRate;
-			}
-		else
-		{
 
+
+
+	//If player enter's enemy's range, add player to imp's range
+    void OnTriggerEnter2D (Collider2D col){
+	
+        if (col.gameObject.tag.Equals("Player")){
+            playerInRange.Add(col.gameObject);
+			
 		}
 	}
+
+    void OnTriggerExit2D(Collider2D col){
+        if (col.gameObject.tag.Equals("Player")){
+            playerInRange.Remove((col.gameObject));
+        }
+    }
+
+    void Shoot(Collider2D target){
+
+        GameObject fireballPrefab = fireball;
+
+        Vector2 startPosition = gameObject.transform.position;
+        Vector2 targetPosition = target.transform.position;
+
+        GameObject newFireball = (GameObject)Instantiate(fireball);
+        newFireball.transform.position = startPosition;
+        EnemyFireball fireballComp = newFireball.GetComponent<EnemyFireball>();
+        fireballComp.target = target.gameObject;
+        fireballComp.startPosition = startPosition;
+        fireballComp.targetPosition = targetPosition;
+
+        //TODO: Add enemy fireball shooting audio 
+        //TODO: add shooting animation 
+    }
+
+	
+	
 
 }
