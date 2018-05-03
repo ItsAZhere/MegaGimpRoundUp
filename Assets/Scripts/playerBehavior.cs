@@ -64,5 +64,8 @@ public class playerBehavior : MonoBehaviour {
 			Destroy (other.gameObject);
 			score ++;
 		}
+		if (other.gameObject.tag == "Bush") {
+			other.GetComponent<SpriteRenderer> ().enabled = false;
+		}
 	}
 }
