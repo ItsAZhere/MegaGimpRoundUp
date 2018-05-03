@@ -277,8 +277,10 @@ MonoBehaviour:
   - {fileID: 1639136849}
   - {fileID: 1696489048}
   countText: {fileID: 1029623411}
+  _count: 0
   portal: {fileID: 788017329}
   hurt: {fileID: 674099838}
+  level: 2
 --- !u!114 &168371171
 MonoBehaviour:
   m_ObjectHideFlags: 0

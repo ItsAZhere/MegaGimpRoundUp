@@ -12,10 +12,21 @@ public class playerBehavior : MonoBehaviour {
 
 	//for score
 	public Text countText;
-	private int count;
+	public int _count;
+	public int count{
+		get{ return _count; }
+		set{
+			_count = value;
+			if (value == 5&& level == 3) {
+				Debug.Log ("Count 5");
+				SceneManager.LoadScene (5);
+				level = 4;
+			}
+		}
+	}
 	public AudioSource portal;
 	public AudioSource hurt;
-	private int level;
+	public int level;
 
 
 	void Start () {
@@ -23,7 +34,7 @@ public class playerBehavior : MonoBehaviour {
 		Health = 3;
 		count = 0;
 		SetCountText ();
-		level = 2;
+		//level = 2;
 
 	}
 
@@ -85,6 +96,7 @@ public class playerBehavior : MonoBehaviour {
 		}
 
 		if (count == 5 && level == 3) {
+			Debug.Log ("Count 5");
 			SceneManager.LoadScene (5);
 			level = 4;
 		}

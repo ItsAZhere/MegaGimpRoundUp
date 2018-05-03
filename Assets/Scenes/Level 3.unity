@@ -9454,8 +9454,10 @@ MonoBehaviour:
   - {fileID: 1260950154}
   - {fileID: 1600227917}
   countText: {fileID: 642104600}
+  _count: 0
   portal: {fileID: 562274866}
   hurt: {fileID: 1503541819}
+  level: 3
 --- !u!114 &699014896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9468,7 +9470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToGo: 0.5
-  Speed: 1
+  Speed: 2
   animationController: {fileID: 699014897}
   isfacingleft: 0
   isfacingright: 0
