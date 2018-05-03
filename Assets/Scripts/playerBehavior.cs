@@ -72,6 +72,20 @@ public class playerBehavior : MonoBehaviour {
 			count = count + 1;
 			SetCountText ();
 		}
+
+		if (count == 4) {
+			SceneManager.LoadScene (3);
+		}
+
+		if (count == 11) {
+			SceneManager.LoadScene (4);
+		}
+
+		if (count == 21) {
+			SceneManager.LoadScene (5);
+		}
+
+
 		if (other.gameObject.tag == "Bush") {
 			other.GetComponent<SpriteRenderer> ().enabled = false;
 		}
