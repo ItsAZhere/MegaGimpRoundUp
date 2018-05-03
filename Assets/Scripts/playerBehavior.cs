@@ -89,6 +89,30 @@ public class playerBehavior : MonoBehaviour {
 		if (other.gameObject.tag == "Bush") {
 			other.GetComponent<SpriteRenderer> ().enabled = false;
 		}
+
+		if (other.gameObject.name == "UpBorders") {
+			GameObject downborder = GameObject.Find ("DownBorders");
+			Vector2 newposition = new Vector2 (downborder.transform.position.x, downborder.transform.position.y + 6f);
+			transform.position = newposition;
+		}
+
+		if (other.gameObject.name == "DownBorders") {
+			GameObject upborder = GameObject.Find ("UpBorders");
+			Vector2 newposition = new Vector2 (upborder.transform.position.x, upborder.transform.position.y - 6f);
+			transform.position = newposition;
+		}
+
+		if (other.gameObject.name == "LeftBorders") {
+			GameObject rightborder = GameObject.Find("RightBorders");
+			Vector2 newposition = new Vector2 (rightborder.transform.position.x - 6f, rightborder.transform.position.y);
+			transform.position = newposition;
+		}
+
+		if (other.gameObject.name == "RightBorders") {
+			GameObject leftborder = GameObject.Find ("LeftBorders");
+			Vector2 newposition = new Vector2 (leftborder.transform.position.x + 6f, leftborder.transform.position.y);
+			transform.position = newposition;
+		}
 	}
 
 	void SetCountText ()
