@@ -15,6 +15,7 @@ public class playerBehavior : MonoBehaviour {
 	private int count;
 	public AudioSource portal;
 	public AudioSource hurt;
+	private int level;
 
 
 	void Start () {
@@ -22,6 +23,7 @@ public class playerBehavior : MonoBehaviour {
 		Health = 3;
 		count = 0;
 		SetCountText ();
+		level = 2;
 
 	}
 
@@ -73,16 +75,18 @@ public class playerBehavior : MonoBehaviour {
 			SetCountText ();
 		}
 
-		if (count == 4) {
-			SceneManager.LoadScene (3);
-		}
+		//if (count == 4) {
+		//	SceneManager.LoadScene (3);
+		//}
 
-		if (count == 11) {
+		if (count == 7 && level == 2) {
 			SceneManager.LoadScene (4);
+			level = 3;
 		}
 
-		if (count == 21) {
+		if (count == 5 && level == 3) {
 			SceneManager.LoadScene (5);
+			level = 4;
 		}
 
 

@@ -16,7 +16,7 @@ public class buttons : MonoBehaviour {
 	}
 
 	public void StartButtonPressed(){
-		SceneManager.LoadScene("Level 1");
+		SceneManager.LoadScene("Level 2");
 	}
 	public void InstructionsButtonPressed(){
 		SceneManager.LoadScene ("Instruction");
