@@ -9,7 +9,7 @@ public class playerMovement : MonoBehaviour {
 
     private bool moveToPoint = false;
     private Vector3 endPosition; 
-
+	//for animation
 	public Animator animationController;
 
 	void Start () {
