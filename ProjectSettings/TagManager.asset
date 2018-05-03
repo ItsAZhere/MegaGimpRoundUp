@@ -3,13 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags:
-  - Enemy
-  - Bush
-=======
-  tags: []
->>>>>>> master
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -44,12 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2515989363
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-=======
-  - name: Bush
-    uniqueID: 3373645641
-    locked: 0
->>>>>>> master
