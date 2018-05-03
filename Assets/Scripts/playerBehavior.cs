@@ -68,8 +68,14 @@ public class playerBehavior : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.tag == "Enemy") {
 			Destroy (other.gameObject);
+<<<<<<< HEAD
 			count = count + 1;
 			SetCountText ();
+=======
+			score ++;
+		}else if (other.CompareTag("Bush")){
+			other.gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+>>>>>>> master
 		}
 	}
 
