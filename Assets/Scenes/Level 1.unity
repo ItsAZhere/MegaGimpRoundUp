@@ -8073,7 +8073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Imps Collected:'
+  m_Text: 'GImps Collected:'
 --- !u!222 &459493281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8615,8 +8615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52eb43acbd68048999cf828fd2d82c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInRange: []
   fireball: {fileID: 1196860322228516, guid: 00a581d4578ee4601bd882777533ab49, type: 2}
-  isStunned: 0
 --- !u!114 &1155659365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8628,6 +8628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf9345ecdddd483f83010bdbb246b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  startPosition: {x: 0, y: 0}
+  targetPosition: {x: 0, y: 0}
 --- !u!1 &1219017086
 GameObject:
   m_ObjectHideFlags: 0
@@ -9041,7 +9044,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
