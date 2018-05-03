@@ -61,17 +61,19 @@ public class EnemyBehavior : MonoBehaviour {
 
         GameObject fireballPrefab = fireball;
 
-        Vector3 startPosition = gameObject.transform.position;
+		Vector3 startPosition = gameObject.transform.position;
         Vector3 targetPosition = target.transform.position;
         startPosition.z = fireballPrefab.transform.position.z;
         targetPosition.z = fireballPrefab.transform.position.z;
+		Debug.Log ("soot");
+		Instantiate(fireball,transform.parent);
 
-        GameObject newFireball = (GameObject)Instantiate(fireball);
+       /* GameObject newFireball = (GameObject)Instantiate(fireball);
         newFireball.transform.position = startPosition;
         EnemyFireball fireballComp = newFireball.GetComponent<EnemyFireball>();
         fireballComp.target = target.gameObject;
         fireballComp.startPosition = startPosition;
-        fireballComp.targetPosition = targetPosition;
+        fireballComp.targetPosition = targetPosition;*/
 
         //TODO: Add enemy fireball shooting audio 
         //TODO: add shooting animation 
