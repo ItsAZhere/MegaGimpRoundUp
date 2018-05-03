@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NumberOfEnemies : MonoBehaviour {
-	GameObject[] spawnpoints;
+	public GameObject[] spawnpoints;
 	int totalEnemies = 0;
 
 	// Use this for initialization

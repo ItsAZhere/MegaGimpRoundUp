@@ -6,7 +6,8 @@ public class spawnEnemy : MonoBehaviour {
 
     public GameObject enemyPrefab;
     public GameObject[] spawnPoints;
-    private gameManager GM;
+
+  //  private gameManager GM;
     private float lastSpawnTime;
 	public bool enemiesSpawned;
     private int chance;
@@ -14,7 +15,7 @@ public class spawnEnemy : MonoBehaviour {
 
 	void Start () {
 
-        GM = GameObject.Find("gameManager").GetComponent<gameManager>();
+ //       GM = GameObject.Find("gameManager").GetComponent<gameManager>();
 
 		
 	}
