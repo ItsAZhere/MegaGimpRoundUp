@@ -8,7 +8,7 @@ public class spawnEnemy : MonoBehaviour {
     public GameObject[] spawnPoints;
     private gameManager GM;
     private float lastSpawnTime;
-    private int enemiesSpawned = 0;
+	public bool enemiesSpawned;
     private int chance;
 
 
