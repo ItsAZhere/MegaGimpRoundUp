@@ -13,6 +13,9 @@ public class playerBehavior : MonoBehaviour {
 	//for score
 	public Text countText;
 	private int count;
+	public AudioSource portal;
+	public AudioSource hurt;
+
 
 	void Start () {
 
@@ -65,6 +68,7 @@ public class playerBehavior : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.tag == "Enemy") {
 			Destroy (other.gameObject);
+			hurt.Play ();
 			count = count + 1;
 			SetCountText ();
 		}

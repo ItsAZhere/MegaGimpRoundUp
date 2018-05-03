@@ -12,6 +12,7 @@ public class EnemyBehavior : MonoBehaviour {
 	float fireRate;
 	float nextFire;
 
+	public AudioSource fire;
 
 
 	
@@ -75,6 +76,8 @@ public class EnemyBehavior : MonoBehaviour {
         fireballComp.startPosition = startPosition;
         fireballComp.targetPosition = targetPosition;
 
+
+		fire.Play ();
         //TODO: Add enemy fireball shooting audio 
         //TODO: add shooting animation 
     }
