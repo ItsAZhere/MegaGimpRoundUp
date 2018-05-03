@@ -26,7 +26,9 @@ public class EnemyFireball : MonoBehaviour {
 	void Update () {
         
         float timeInterval = Time.time - startTime;
-        gameObject.transform.position = Vector3.Lerp(startPosition, targetPosition, timeInterval * speed / distance);
+       // gameObject.transform.position = Vector3.Lerp(startPosition, targetPosition, timeInterval * speed / distance);
+		gameObject.transform.position = Vector3.Lerp(startPosition, targetPosition, timeInterval * speed / (distance*2));
+
 
         if (gameObject.transform.position.Equals(targetPosition)){
             if (target != null)
@@ -39,6 +41,15 @@ public class EnemyFireball : MonoBehaviour {
         }
 
 	}
+	/*
+	void onTriggerEnter2D(Collider2D coll){
+		if (coll.CompareTag ("Player")) {
+			playerBehavior player = GameObject.Find("Player").GetComponent<playerBehavior>();
+			player.Health--;
+			Destroy(this.gameObject);
+
+		}
+	}*/
 
 
 }

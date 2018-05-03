@@ -44,14 +44,14 @@ public class BushSpawnFire : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
-		if (coll.CompareTag ("Player")&&!SR.enabled) {
+		if (coll.CompareTag ("Player")) {
 			tempPlayer = coll.gameObject;
 			inSpace = true;
 			StartCoroutine (Shoot (coll));
 		}
 	}
 	void OnTriggerExit2D(Collider2D coll){
-		if (coll.CompareTag ("Player")&&!SR.enabled) {
+		if (coll.CompareTag ("Player")) {
 			tempPlayer = null;
 			inSpace = false;
 		}

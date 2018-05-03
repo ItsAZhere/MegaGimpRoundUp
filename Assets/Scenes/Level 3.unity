@@ -8875,26 +8875,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4844017928779500, guid: a2df5e91304454ebfa1f9191b71fb8e2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844017928779500, guid: a2df5e91304454ebfa1f9191b71fb8e2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844017928779500, guid: a2df5e91304454ebfa1f9191b71fb8e2, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.46596986
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844017928779500, guid: a2df5e91304454ebfa1f9191b71fb8e2, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.46596986
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844017928779500, guid: a2df5e91304454ebfa1f9191b71fb8e2, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.11151385
-      objectReference: {fileID: 0}
     - target: {fileID: 1903997862045044, guid: a2df5e91304454ebfa1f9191b71fb8e2, type: 2}
       propertyPath: m_Name
       value: imps 1 (1)

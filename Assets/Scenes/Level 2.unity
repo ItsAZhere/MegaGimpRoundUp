@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToGo: 0.5
-  Speed: 1
+  Speed: 2.5
   animationController: {fileID: 168371172}
   isfacingleft: 0
   isfacingright: 0
